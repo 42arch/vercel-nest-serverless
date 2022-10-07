@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "nest-server",
+  "name": "vercel-nest-serverless",
   "builds": [
     {
       "src": "dist/main.js",
