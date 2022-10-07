@@ -24,9 +24,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: yarn
-      - run: yarn run build --if-present
+          cache: 'yarn'
+      - run: yarn install --immutable
+      - run: yarn run build
       - name: Deploy to Vercel
         run: npx vercel --token ${VERCEL_TOKEN} --prod
         env:
